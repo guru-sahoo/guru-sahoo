@@ -2,7 +2,8 @@
 - 👀 I’m interested in Full Stack Web Development
 - 🌱 I’m currently learning Angular
 
-Technologies known https://angular.io/assets/images/logos/angular/angular.svg
+Technologies known ![angular](https://user-images.githubusercontent.com/67640200/111741369-6b3f6000-88ac-11eb-96f0-5f535ae94fc9.png)
+
 
 <!---
 guru-sahoo-dev/guru-sahoo-dev is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
