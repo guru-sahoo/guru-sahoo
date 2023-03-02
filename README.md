@@ -1,7 +1,7 @@
 <img align='right' src='https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/456/275/datas/original.gif' width='200'>
 <h1>👋 Hi, I’m Guru Sahoo</h1>
 <h4>- 👀 I’m interested in Full Stack Development</h4>
-<h4>- 🌱 Currently I'm learning React Native</h4>
+<h4>- 🌱 Currently I'm learning React.js</h4>
 
 <!-- **Languages and Tools:**  
 <br />
