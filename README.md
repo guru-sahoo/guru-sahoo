@@ -28,10 +28,10 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="30" alt="mysql logo"  />
   <img width="12" />
-  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/sequelize/sequelize-original.svg" height="30" alt="git logo"  />
-      <img width="12" />
-   <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/firebase/firebase-original.svg" height="30" alt="git logo"  />
-   <img width="12" />
+<!--   <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/sequelize/sequelize-original.svg" height="30" alt="git logo"  />
+      <img width="12" /> -->
+<!--    <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/firebase/firebase-original.svg" height="30" alt="git logo"  />
+   <img width="12" /> -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30" alt="react logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" height="30" alt="redux logo"  />
