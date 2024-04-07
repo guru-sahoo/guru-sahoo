@@ -68,16 +68,16 @@
 ###
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/dhaneswarseth/" target="_blank">
+  <a href="https://www.linkedin.com/in/gurusahoo/" target="_blank">
     <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
   </a>
-  <a href="https://www.instagram.com/i_am_dhanes/" target="_blank">
+  <a href="https://www.instagram.com/gurusahoo09?igsh=OGFtemlsZjE0ZmRu" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"  />
   </a>
-  <a href="https://www.facebook.com/dhanes.munu.96/" target="_blank">
+  <a href="https://www.facebook.com/profile.php?id=100081236926794&mibextid=ZbWKwL" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Facebook&logo=facebook&label=&color=1877F2&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="facebook logo"  />
   </a>
-  <a href="https://twitter.com/setha_dhaneswar" target="_blank">
+  <a href="https://x.com/GuruSahoo09?t=I1IIekGZ52VvbTzvRNlUBg&s=09" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="twitter logo"  />
   </a>
 <!--   <a href="https://stackoverflow.com/users/20839966/dhaneswar-setha" target="_blank">
