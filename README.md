@@ -2,10 +2,6 @@
 <h1>👋 Hi, I’m Guru Sahoo <p align="left"> <img src="https://komarev.com/ghpvc/?username=guru-sahoo&label=Profile%20views&color=0e75b6&style=flat" alt="guru-sahoo" /> </p></h1>
 <h4>- 👀 I’m interested in Full Stack Development</h4>
 <h4>- 🌱 Currently I'm learning React.js</h4>
-
-<h2 align="left">Hi 👋! My name is Guru Sahoo and I'm a Full Stack Developer , from  India  <p align="left"> <img src="https://komarev.com/ghpvc/?username=dhaneswar-setha&label=Profile%20views&color=0e75b6&style=flat" alt="dhaneswar-setha" /> </p></h2>
- 
-
 ###
 
 <div align="center">
@@ -48,14 +44,14 @@
 ###
 
 <div align="left">
-  <a href="https://www.facebook.com/dhanes.munu.96/" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Facebook&logo=facebook&label=&color=1877F2&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="facebook logo"  />
+  <a href="https://www.linkedin.com/in/dhaneswarseth/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
   </a>
   <a href="https://www.instagram.com/i_am_dhanes/" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"  />
   </a>
-  <a href="https://www.linkedin.com/in/dhaneswarseth/" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
+  <a href="https://www.facebook.com/dhanes.munu.96/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Facebook&logo=facebook&label=&color=1877F2&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="facebook logo"  />
   </a>
   <a href="https://twitter.com/setha_dhaneswar" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="twitter logo"  />
