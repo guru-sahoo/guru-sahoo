@@ -39,7 +39,28 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="30" alt="git logo"  />
   <img width="12" />
   <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/azure/azure-original.svg" height="30" alt="git logo"  />
-
+    <img width="12" />
+  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height="30" alt="git logo"  />
+      <img width="12" />
+  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/googlecloud/googlecloud-original.svg" height="30" alt="git logo"  />
+      <img width="12" />
+  <img src=" https://github.com/devicons/devicon/blob/v2.16.0/icons/nginx/nginx-original.svg" height="30" alt="git logo"  />
+      <img width="12" />
+  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/ngrx/ngrx-original.svg" height="30" alt="git logo"  />
+      <img width="12" />
+  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/postgresql/postgresql-original.svg" height="30" alt="git logo"  />
+      <img width="12" />
+  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/rabbitmq/rabbitmq-original.svg" height="30" alt="git logo"  />
+      <img width="12" />
+  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/rxjs/rxjs-original.svg" height="30" alt="git logo"  />
+      <img width="12" />
+  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/sequelize/sequelize-original.svg" height="30" alt="git logo"  />
+      <img width="12" />
+  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/swagger/swagger-original.svg" height="30" alt="git logo"  />
+      <img width="12" />
+  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/docker/docker-original.svg" height="30" alt="git logo"  />
+      <img width="12" />
+  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/firebase/firebase-original.svg" height="30" alt="git logo"  />
 </div>
 
 
