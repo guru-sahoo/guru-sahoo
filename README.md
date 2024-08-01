@@ -4,8 +4,7 @@
 <h3>- 👀 I’m interested in Full Stack Development</h4>
 <h3>- 🌱 Currently I'm learning React.js</h4>
 
-###
-###
+
 
 ### 📈 GitHub Stats
 
