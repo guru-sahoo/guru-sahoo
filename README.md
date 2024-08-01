@@ -4,6 +4,9 @@
 <h3>- 👀 I’m interested in Full Stack Development</h4>
 <h3>- 🌱 Currently I'm learning React.js</h4>
 
+###
+###
+
 ### 📈 GitHub Stats
 
 <p align="center">
@@ -12,9 +15,9 @@
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=guru-sahoo&show_icons=true&theme=dark" alt="GitHub Stats">
 </p>
-<p align="center">
+<!-- <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=guru-sahoo&layout=compact&theme=dark" alt="Top Languages">
-</p>
+</p> -->
 
 ###
 
