@@ -9,13 +9,13 @@
 <div align="center">
   <h3>📈 GitHub Stats</h3>
   <p>
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=guru-sahoo&theme=dark" alt="GitHub Streak">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=guru-sahoo-dev&theme=dark" alt="GitHub Streak">
   </p>
   <p>
-    <img src="https://github-readme-stats.vercel.app/api?username=guru-sahoo&show_icons=true&theme=dark" alt="GitHub Stats">
+    <img src="https://github-readme-stats.vercel.app/api?username=guru-sahoo-dev&show_icons=true&theme=dark" alt="GitHub Stats">
   </p>
   <p>
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=guru-sahoo&layout=compact&theme=dark" alt="Top Languages">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=guru-sahoo-dev&layout=compact&theme=dark" alt="Top Languages">
   </p>
 </div>
 
