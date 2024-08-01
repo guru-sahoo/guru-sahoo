@@ -7,7 +7,7 @@
 
 ###
 <div align="center">
-  <h2>📈 GitHub Stats</h3>
+  <h2>📈 GitHub Stats</h2>
   <p>
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=guru-sahoo-dev&theme=dark" alt="GitHub Streak">
   </p>
@@ -18,6 +18,7 @@
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=guru-sahoo-dev&layout=compact&theme=dark" alt="Top Languages">
   </p>
 </div>
+
 
 ###
 <div align="center">
@@ -55,6 +56,7 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="30" alt="git logo"  />
 </div>
+
 
 ###
 <div align="center">
