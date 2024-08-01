@@ -4,9 +4,17 @@
 <h3>- 👀 I’m interested in Full Stack Development</h4>
 <h3>- 🌱 Currently I'm learning React.js</h4>
 
-###
+### 📈 GitHub Stats
 
-
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=guru-sahoo&theme=dark" alt="GitHub Streak">
+</p>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=guru-sahoo&show_icons=true&theme=dark" alt="GitHub Stats">
+</p>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=guru-sahoo&layout=compact&theme=dark" alt="Top Languages">
+</p>
 
 ###
 
@@ -15,52 +23,36 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="30" alt="typescript logo"  />
   <img width="12" />
-   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="30" alt="nodejs logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="30" alt="nodejs logo"  />
   <img width="12" />
-   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="30" alt="mongodb logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="30" alt="mongodb logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="30" alt="mysql logo"  />
   <img width="12" />
-<!--   <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/sequelize/sequelize-original.svg" height="30" alt="git logo"  />
-      <img width="12" /> -->
-<!--    <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/firebase/firebase-original.svg" height="30" alt="git logo"  />
-   <img width="12" /> -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30" alt="react logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" height="30" alt="redux logo"  />
   <img width="12" />
-   <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/angular/angular-original.svg" height="30" alt="angular logo"  />
+  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/angular/angular-original.svg" height="30" alt="angular logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg" height="30" alt="ionic logo"  />
   <img width="12" />
   <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/rxjs/rxjs-original.svg" height="30" alt="git logo"  />
-   <img width="12" />
+  <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" alt="html5 logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="css3 logo"  />
   <img width="12" />
   <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/azure/azure-original.svg" height="30" alt="git logo"  />
-    <img width="12" />
+  <img width="12" />
   <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height="30" alt="git logo"  />
-      <img width="12" />
+  <img width="12" />
   <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/googlecloud/googlecloud-original.svg" height="30" alt="git logo"  />
-      <img width="12" />
+  <img width="12" />
   <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/nginx/nginx-original.svg" height="30" alt="git logo"  />
-      <img width="12" />
+  <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="30" alt="git logo"  />
-<!--   <img width="12" /> -->
-<!--   <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/ngrx/ngrx-original.svg" height="30" alt="git logo"  />
-      <img width="12" /> -->
-<!--   <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/postgresql/postgresql-original.svg" height="30" alt="git logo"  />
-      <img width="12" /> -->
-<!--   <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/rabbitmq/rabbitmq-original.svg" height="30" alt="git logo"  />
-      <img width="12" /> -->
-<!--   <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/swagger/swagger-original.svg" height="30" alt="git logo"  />
-      <img width="12" /> -->
-<!--   <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/docker/docker-original.svg" height="30" alt="git logo"  />
-      <img width="12" /> -->
 </div>
-
 
 ###
 
@@ -77,22 +69,7 @@
   <a href="https://x.com/GuruSahoo09?t=I1IIekGZ52VvbTzvRNlUBg&s=09" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="twitter logo"  />
   </a>
-<!--   <a href="https://stackoverflow.com/users/20839966/dhaneswar-setha" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Stackoverflow&logo=stackoverflow&label=&color=FE7A16&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="stackoverflow logo"  />
-  </a>
-  <a href="https://medium.com/@dhaneswarsetha.123" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Medium&logo=medium&label=&color=12100E&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="medium logo"  />
-  </a> -->
-
-  </a>
-
 </div>
-
-
-
-
-
-
 
 <!---
 guru-sahoo-dev/guru-sahoo-dev is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
