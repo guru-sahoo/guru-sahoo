@@ -1,0 +1,35 @@
+name: Update README
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+    branches:
+      - main
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Generate README stats
+        run: |
+          echo '### 📈 GitHub Stats' > README.md
+          echo '<p align="center">' >> README.md
+          echo '<img src="https://github-readme-streak-stats.herokuapp.com/?user=${{ github.repository_owner }}&theme=dark" alt="GitHub Streak">' >> README.md
+          echo '</p>' >> README.md
+          echo '<p align="center">' >> README.md
+          echo '<img src="https://github-readme-stats.vercel.app/api?username=${{ github.repository_owner }}&show_icons=true&theme=dark" alt="GitHub Stats">' >> README.md
+          echo '</p>' >> README.md
+          echo '<p align="center">' >> README.md
+          echo '<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=${{ github.repository_owner }}&layout=compact&theme=dark" alt="Top Languages">' >> README.md
+          echo '</p>' >> README.md
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name "${{ secrets.USER_EMAIL }}" 'github-actions[bot]'
+          git config --global user.email "${{ secrets.USER_NAME }}" 'github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git commit -m 'Update README'
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
