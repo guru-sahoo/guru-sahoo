@@ -4,22 +4,6 @@
 <h3>- 👀 I’m interested in Full Stack Development</h4>
 <h3>- 🌱 Currently I'm learning React.js</h4>
 
-
-###
-<div align="center">
-  <h2>📈 GitHub Stats</h2>
-  <p>
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=guru-sahoo-dev&theme=dark" alt="GitHub Streak">
-  </p>
-  <p>
-    <img src="https://github-readme-stats.vercel.app/api?username=guru-sahoo-dev&show_icons=true&theme=dark" alt="GitHub Stats">
-  </p>
-  <p>
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=guru-sahoo-dev&layout=compact&theme=dark" alt="Top Languages">
-  </p>
-</div>
-
-
 ###
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
