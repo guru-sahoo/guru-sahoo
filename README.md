@@ -1,8 +1,8 @@
 <img align='right' src='https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/456/275/datas/original.gif' width='200'>
 <h1 align="left">👋 Hi, I’m Guru Sahoo</h1>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=guru-sahoo&label=Profile%20views&color=0e75b6&style=flat" alt="guru-sahoo" /> </p>
-<h3>- 👀 I’m interested in Full Stack Development</h4>
-<!-- <h3>- 🌱 Currently I'm learning React.js</h4> -->
+<h3>- 👀 I’m interested in Full Stack Development</h3>
+<h3>- 🌱 Currently I'm learning React.js</h3>
 
 ###
 <div align="center">
