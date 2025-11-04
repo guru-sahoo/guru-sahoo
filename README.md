@@ -2,7 +2,7 @@
 <h1 align="left">👋 Hi, I’m Guru Sahoo</h1>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=guru-sahoo&label=Profile%20views&color=0e75b6&style=flat" alt="guru-sahoo" /> </p>
 <h3>- 👀 I’m interested in Full Stack Development</h3>
-<h3>- 🌱 Currently I'm learning React.js</h3>
+<h3>- 🌱 Currently I'm learning Devops & ML</h3>
 
 ###
 <div align="center">
