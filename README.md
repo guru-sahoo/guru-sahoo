@@ -1,7 +1,7 @@
 <img align='right' src='https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/456/275/datas/original.gif' width='200'>
-<h1 align="left">👋 Hi, I’m Guru Sahoo</h1>
+<h1 align="left">👋 Hi, I'm Guru Sahoo</h1>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=guru-sahoo&label=Profile%20views&color=0e75b6&style=flat" alt="guru-sahoo" /> </p>
-<h3>- 👀 I’m interested in Full Stack Development</h3>
+<h3>- 👀 I'm interested in Full Stack Development</h3>
 <h3>- 🌱 Currently I'm learning Devops & ML</h3>
 
 ###
@@ -56,6 +56,32 @@
   <a href="https://x.com/GuruSahoo09?t=I1IIekGZ52VvbTzvRNlUBg&s=09" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="twitter logo"  />
   </a>
+</div>
+
+###
+
+<div align="center">
+  <h2>📊 GitHub Activity & Stats</h2>
+</div>
+
+###
+
+<!-- Contribution Graph - Last 12 Months -->
+[![Guru's GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=guru-sahoo&theme=react-dark&hide_border=true&area=true&custom_title=Contribution%20Graph%20-%20Last%2012%20Months)](https://github.com/ashutosh00710/github-readme-activity-graph)
+
+###
+
+<!-- GitHub Stats Cards -->
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=guru-sahoo&show_icons=true&theme=dark&include_all_commits=true&count_private=true&hide_border=true" height="170" alt="stats"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=guru-sahoo&theme=dark&hide_border=true" height="170" alt="streak"/>
+</div>
+
+###
+
+<!-- Top Languages -->
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=guru-sahoo&layout=compact&theme=dark&hide_border=true" alt="languages"/>
 </div>
 
 <!---
