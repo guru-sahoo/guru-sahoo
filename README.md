@@ -64,8 +64,17 @@
 ### 📊 GitHub Stats
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=guru-sahoo&show_icons=true&include_all_commits=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9&rank_icon=github" alt="GitHub Stats"/>
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=guru-sahoo&layout=compact&langs_count=8&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" alt="Top Languages"/>
+  <img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=guru-sahoo&theme=github_dark" alt="Profile Details"/>
+</p>
+
+<p align="center">
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=guru-sahoo&theme=github_dark" alt="GitHub Stats"/>
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=guru-sahoo&theme=github_dark" alt="Most Commit Language"/>
+</p>
+
+<p align="center">
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=guru-sahoo&theme=github_dark" alt="Repos per Language"/>
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=guru-sahoo&theme=github_dark&utcOffset=5.5" alt="Productive Time"/>
 </p>
 
 <p align="center">
@@ -75,16 +84,7 @@
 ### 📈 Contribution Graph
 
 <p align="center">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=guru-sahoo&custom_title=Contributions%20in%20the%20Last%20Year&bg_color=0d1117&color=58a6ff&line=1f6feb&point=ffffff&area=true&area_color=1f6feb&hide_border=true&radius=8" alt="Contribution Graph"/>
-</p>
-
-<!-- Snake animation: works after you add the workflow file (see below) -->
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/guru-sahoo/guru-sahoo/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/guru-sahoo/guru-sahoo/output/github-snake.svg" />
-    <img alt="Contribution snake" src="https://raw.githubusercontent.com/guru-sahoo/guru-sahoo/output/github-snake-dark.svg" />
-  </picture>
+  <img width="100%" src="https://ghchart.rshah.org/58a6ff/guru-sahoo" alt="Contribution Heatmap"/>
 </p>
 
 ---
