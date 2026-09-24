@@ -25,9 +25,9 @@
 
 ### 🛠️ Tech Stack
 
-<table align="center">
+<table width="100%">
   <tr>
-    <td align="center" valign="top">
+    <td align="center" valign="top" width="50%">
       <b>Frontend & Mobile</b><br/><br/>
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg" height="40" title="React"/>&nbsp;&nbsp;
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nextjs/nextjs-original.svg" height="40" title="Next.js"/>&nbsp;&nbsp;
@@ -35,7 +35,7 @@
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/angular/angular-original.svg" height="40" title="Angular"/>&nbsp;&nbsp;
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/ionic/ionic-original.svg" height="40" title="Ionic"/>
     </td>
-    <td align="center" valign="top">
+    <td align="center" valign="top" width="50%">
       <b>Languages & Backend</b><br/><br/>
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" height="40" title="JavaScript"/>&nbsp;&nbsp;
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg" height="40" title="TypeScript"/>&nbsp;&nbsp;
@@ -47,20 +47,20 @@
   </tr>
 </table>
 
-<table align="center">
+<table width="100%">
   <tr>
-    <td align="center" valign="top">
+    <td align="center" valign="top" width="33%">
       <b>Databases</b><br/><br/>
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mongodb/mongodb-original.svg" height="40" title="MongoDB"/>&nbsp;&nbsp;
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mysql/mysql-original.svg" height="40" title="MySQL"/>&nbsp;&nbsp;
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg" height="40" title="PostgreSQL"/>
     </td>
-    <td align="center" valign="top">
+    <td align="center" valign="top" width="33%">
       <b>Caching & Messaging</b><br/><br/>
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/redis/redis-original.svg" height="40" title="Redis"/>&nbsp;&nbsp;
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/rabbitmq/rabbitmq-original.svg" height="40" title="RabbitMQ"/>
     </td>
-    <td align="center" valign="top">
+    <td align="center" valign="top" width="33%">
       <b>Cloud & DevOps</b><br/><br/>
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height="40" title="AWS" style="background:#fff;border-radius:6px"/>&nbsp;&nbsp;
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/azure/azure-original.svg" height="40" title="Microsoft Azure"/>&nbsp;&nbsp;
