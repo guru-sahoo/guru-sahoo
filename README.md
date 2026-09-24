@@ -70,7 +70,7 @@
 ### 📊 GitHub Activity
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=guru-sahoo&theme=github-dark-blue&hide_border=true&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff&sideLabels=c9d1d9&dates=8b949e" alt="GitHub Streak"/>
+  <img width="100%" src="./assets/stats-card.svg" alt="Total contributions, highest month and day, and streaks"/>
 </p>
 
 <p align="center">

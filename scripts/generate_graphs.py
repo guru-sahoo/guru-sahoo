@@ -1,6 +1,7 @@
 """Generate dark-theme contribution SVGs for the GitHub profile README.
 
 Outputs:
+  assets/stats-card.svg            - all-time total (+ highest month/day), current & longest streak
   assets/contribution-heatmap.svg  - last 12 months, full-width heatmap
   assets/activity-30d.svg          - daily contributions, last 30 days, bar chart
   assets/activity-12m.svg          - monthly contributions, last 12 months, bar chart
@@ -22,25 +23,45 @@ ACCENT, ACCENT_2 = "#58a6ff", "#1f6feb"
 LEVELS = ["#161b22", "#0c2d6b", "#1158c7", "#388bfd", "#79c0ff"]
 FONT = "font-family=\"-apple-system,Segoe UI,Helvetica,Arial,sans-serif\""
 
-QUERY = """query($login:String!){user(login:$login){contributionsCollection{
-contributionCalendar{totalContributions weeks{contributionDays{date contributionCount}}}}}}"""
+CALENDAR = "contributionCalendar{weeks{contributionDays{date contributionCount}}}"
+QUERY = "query($login:String!){user(login:$login){contributionsCollection{contributionYears %s}}}" % CALENDAR
 
 
-def fetch_days():
+def graphql(query):
     token = os.environ.get("GH_PAT") or os.environ.get("GITHUB_TOKEN")
     if not token:
         sys.exit("Set GH_PAT or GITHUB_TOKEN")
     req = urllib.request.Request(
         "https://api.github.com/graphql",
-        data=json.dumps({"query": QUERY, "variables": {"login": USER}}).encode(),
+        data=json.dumps({"query": query, "variables": {"login": USER}}).encode(),
         headers={"Authorization": f"bearer {token}", "Content-Type": "application/json"},
     )
     with urllib.request.urlopen(req, timeout=30) as r:
         payload = json.load(r)
     if "errors" in payload:
         sys.exit(f"GraphQL error: {payload['errors']}")
-    weeks = payload["data"]["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]
-    return [d for w in weeks for d in w["contributionDays"]]
+    return payload["data"]["user"]
+
+
+def calendar_days(collection):
+    return [d for w in collection["contributionCalendar"]["weeks"] for d in w["contributionDays"]]
+
+
+def fetch_days():
+    """Return (last-year days, all-time days). The API caps a collection at one year,
+    so all-time history is fetched as one aliased collection per contribution year."""
+    recent = graphql(QUERY)["contributionsCollection"]
+    days = calendar_days(recent)
+    years = "".join(
+        f'y{y}:contributionsCollection(from:"{y}-01-01T00:00:00Z",to:"{y}-12-31T23:59:59Z"){{{CALENDAR}}}'
+        for y in recent["contributionYears"]
+    )
+    history = graphql("query($login:String!){user(login:$login){%s}}" % years)
+    today = max(d["date"] for d in days)
+    counts = {d["date"]: d["contributionCount"] for c in history.values() for d in calendar_days(c)}
+    counts.update({d["date"]: d["contributionCount"] for d in days})
+    all_days = [{"date": k, "contributionCount": v} for k, v in sorted(counts.items()) if k <= today]
+    return days, all_days
 
 
 def level(count, peak):
@@ -182,12 +203,95 @@ def monthly_chart(days, months=12):
     return bar_chart(labels, vals, f"Monthly contributions · last {len(vals)} months", stats, label_size=12)
 
 
+def fmt_day(d, year=True):
+    return f"{d:%b} {d.day}, {d.year}" if year else f"{d:%b} {d.day}"
+
+
+def fmt_range(a, b, today):
+    show_year = not (a.year == b.year == today.year)
+    return fmt_day(a, show_year) if a == b else f"{fmt_day(a, show_year)} - {fmt_day(b, show_year)}"
+
+
+def stats_card(all_days):
+    days = sorted(all_days, key=lambda d: d["date"])
+    dates = [dt.date.fromisoformat(d["date"]) for d in days]
+    counts = [d["contributionCount"] for d in days]
+    today = dates[-1]
+    total = sum(counts)
+    first = next((d for d, c in zip(dates, counts) if c), today)
+
+    months = {}
+    for d, c in zip(dates, counts):
+        months[(d.year, d.month)] = months.get((d.year, d.month), 0) + c
+    (by, bm), best_month = max(months.items(), key=lambda kv: kv[1])
+    best_day = counts.index(max(counts))
+
+    longest, run, run_start, long_range = 0, 0, today, (today, today)
+    for d, c in zip(dates, counts):
+        run = run + 1 if c else 0
+        if run == 1:
+            run_start = d
+        if run > longest:
+            longest, long_range = run, (run_start, d)
+    # Like streak-stats, an empty today doesn't break the streak until the day is over.
+    end = len(counts) - 1 if counts[-1] else len(counts) - 2
+    current = 0
+    while end - current >= 0 and counts[end - current]:
+        current += 1
+    cur_range = (dates[end - current + 1], dates[end]) if current else (today, today)
+
+    W, H = 1000, 240
+    col = W / 3
+    c1, c2, c3 = col / 2, W / 2, W - col / 2
+    big = f'font-size="30" font-weight="700" fill="{TEXT}" text-anchor="middle"'
+    lab = 'font-size="14" font-weight="600" text-anchor="middle"'
+    sub = 'class="t" text-anchor="middle"'
+
+    total_col = (
+        f'<text x="{c1:.1f}" y="72" {big}>{total:,}</text>'
+        f'<text x="{c1:.1f}" y="100" {lab} fill="{TEXT}">Total Contributions</text>'
+        f'<text x="{c1:.1f}" y="120" {sub}>{fmt_day(first)} - Present</text>'
+        f'<line x1="{c1 - 120:.1f}" x2="{c1 + 120:.1f}" y1="140" y2="140" stroke="{BORDER}"/>'
+    )
+    for x, value, name, when in (
+        (c1 - 62, best_month, "Highest in a month", f"{dt.date(by, bm, 1):%b %Y}"),
+        (c1 + 62, counts[best_day], "Highest in a day", fmt_day(dates[best_day])),
+    ):
+        total_col += (
+            f'<text x="{x:.1f}" y="170" font-size="20" font-weight="700" fill="{ACCENT}" text-anchor="middle">{value:,}</text>'
+            f'<text x="{x:.1f}" y="190" font-size="12" font-weight="600" fill="{TEXT}" text-anchor="middle">{name}</text>'
+            f'<text x="{x:.1f}" y="207" {sub}>{when}</text>'
+        )
+    streak_col = (
+        f'<circle cx="{c2}" cy="98" r="42" fill="none" stroke="{ACCENT}" stroke-width="5"/>'
+        f'<text x="{c2}" y="109" {big}>{current:,}</text>'
+        f'<text x="{c2}" y="172" {lab} fill="{ACCENT}">Current Streak</text>'
+        f'<text x="{c2}" y="192" {sub}>{fmt_range(*cur_range, today)}</text>'
+    )
+    longest_col = (
+        f'<text x="{c3:.1f}" y="110" {big}>{longest:,}</text>'
+        f'<text x="{c3:.1f}" y="138" {lab} fill="{TEXT}">Longest Streak</text>'
+        f'<text x="{c3:.1f}" y="158" {sub}>{fmt_range(*long_range, today)}</text>'
+    )
+    dividers = "".join(
+        f'<line x1="{x:.1f}" x2="{x:.1f}" y1="36" y2="{H - 36}" stroke="{BORDER}"/>' for x in (col, 2 * col)
+    )
+    return (
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">'
+        f'<style>.t{{fill:{MUTED};font-size:12px}}</style>'
+        f'<rect width="100%" height="100%" rx="8" fill="{BG}" stroke="{BORDER}"/>'
+        f'<g {FONT}>{total_col}{dividers}{streak_col}{longest_col}</g></svg>'
+    )
+
+
 def main():
     if len(sys.argv) > 1:  # local testing: python generate_graphs.py sample.json
-        days = json.load(open(sys.argv[1]))
+        days = all_days = json.load(open(sys.argv[1]))
     else:
-        days = fetch_days()
+        days, all_days = fetch_days()
     os.makedirs(OUT_DIR, exist_ok=True)
+    with open(os.path.join(OUT_DIR, "stats-card.svg"), "w") as f:
+        f.write(stats_card(all_days))
     with open(os.path.join(OUT_DIR, "contribution-heatmap.svg"), "w") as f:
         f.write(heatmap(days))
     with open(os.path.join(OUT_DIR, "activity-30d.svg"), "w") as f:
