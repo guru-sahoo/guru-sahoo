@@ -26,6 +26,15 @@
 ### 🛠️ Tech Stack
 
 <p align="center">
+  <b>Frontend & Mobile</b><br/><br/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg" height="40" title="React"/>&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nextjs/nextjs-original.svg" height="40" title="Next.js"/>&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/redux/redux-original.svg" height="40" title="Redux"/>&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/angular/angular-original.svg" height="40" title="Angular"/>&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/ionic/ionic-original.svg" height="40" title="Ionic"/>
+</p>
+
+<p align="center">
   <b>Languages & Backend</b><br/><br/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" height="40" title="JavaScript"/>&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg" height="40" title="TypeScript"/>&nbsp;&nbsp;
@@ -33,15 +42,6 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/express/express-original.svg" height="40" title="Express" style="background:#fff;border-radius:6px"/>&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" height="40" title="Python"/>&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/fastapi/fastapi-original.svg" height="40" title="FastAPI"/>
-</p>
-
-<p align="center">
-  <b>Frontend & Mobile</b><br/><br/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg" height="40" title="React"/>&nbsp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nextjs/nextjs-original.svg" height="40" title="Next.js"/>&nbsp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/redux/redux-original.svg" height="40" title="Redux"/>&nbsp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/angular/angular-original.svg" height="40" title="Angular"/>&nbsp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/ionic/ionic-original.svg" height="40" title="Ionic"/>
 </p>
 
 <p align="center">
