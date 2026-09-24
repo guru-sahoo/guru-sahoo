@@ -2,7 +2,7 @@ name: Update contribution graphs
 
 on:
   schedule:
-    - cron: "30 18 * * *"   # daily at 00:00 IST
+    - cron: "30 */3 * * *"   # every 3 hours (GitHub may delay scheduled runs)
   workflow_dispatch:
   push:
     paths:

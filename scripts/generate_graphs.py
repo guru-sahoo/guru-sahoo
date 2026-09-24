@@ -187,9 +187,6 @@ def main():
         days = json.load(open(sys.argv[1]))
     else:
         days = fetch_days()
-    # Today is usually incomplete; drop it so the line doesn't dip to 0 every morning.
-    today = dt.datetime.now(dt.timezone(dt.timedelta(hours=5, minutes=30))).date().isoformat()
-    days = [d for d in days if d["date"] < today] or days
     os.makedirs(OUT_DIR, exist_ok=True)
     with open(os.path.join(OUT_DIR, "contribution-heatmap.svg"), "w") as f:
         f.write(heatmap(days))
