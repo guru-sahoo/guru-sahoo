@@ -23,6 +23,20 @@ ACCENT, ACCENT_2 = "#58a6ff", "#1f6feb"
 LEVELS = ["#161b22", "#0c2d6b", "#1158c7", "#388bfd", "#79c0ff"]
 FONT = "font-family=\"-apple-system,Segoe UI,Helvetica,Arial,sans-serif\""
 
+# 24x24 icon paths (Material icons) for the stats card.
+ICONS = {
+    "flame": "M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 "
+             "10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 "
+             "0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z",
+    "chart": "M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z",
+    "calendar": "M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1"
+                "-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z",
+    "bolt": "M13 2 4 14h7l-1 8 9-12h-7z",
+    "trophy": "M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v"
+              "-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 "
+              "9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z",
+}
+
 CALENDAR = "contributionCalendar{weeks{contributionDays{date contributionCount}}}"
 QUERY = "query($login:String!){user(login:$login){contributionsCollection{contributionYears %s}}}" % CALENDAR
 
@@ -240,47 +254,51 @@ def stats_card(all_days):
         current += 1
     cur_range = (dates[end - current + 1], dates[end]) if current else (today, today)
 
-    W, H = 1000, 240
-    col = W / 3
-    c1, c2, c3 = col / 2, W / 2, W - col / 2
-    big = f'font-size="30" font-weight="700" fill="{TEXT}" text-anchor="middle"'
+    # One row of five stats; the current streak sits in the middle inside its ring.
+    W, H = 1000, 210
+    col = W / 5
+    big = f'font-size="28" font-weight="700" fill="{TEXT}" text-anchor="middle"'
     lab = 'font-size="14" font-weight="600" text-anchor="middle"'
     sub = 'class="t" text-anchor="middle"'
 
-    total_col = (
-        f'<text x="{c1:.1f}" y="72" {big}>{total:,}</text>'
-        f'<text x="{c1:.1f}" y="100" {lab} fill="{TEXT}">Total Contributions</text>'
-        f'<text x="{c1:.1f}" y="120" {sub}>{fmt_day(first)} - Present</text>'
-        f'<line x1="{c1 - 120:.1f}" x2="{c1 + 120:.1f}" y1="140" y2="140" stroke="{BORDER}"/>'
-    )
-    for x, value, name, when in (
-        (c1 - 62, best_month, "Highest in a month", f"{dt.date(by, bm, 1):%b %Y}"),
-        (c1 + 62, counts[best_day], "Highest in a day", fmt_day(dates[best_day])),
-    ):
-        total_col += (
-            f'<text x="{x:.1f}" y="170" font-size="20" font-weight="700" fill="{ACCENT}" text-anchor="middle">{value:,}</text>'
-            f'<text x="{x:.1f}" y="190" font-size="12" font-weight="600" fill="{TEXT}" text-anchor="middle">{name}</text>'
-            f'<text x="{x:.1f}" y="207" {sub}>{when}</text>'
+    def icon(cx, cy, name, size=26):
+        s = size / 24
+        return (f'<path transform="translate({cx - size / 2:.1f},{cy - size / 2:.1f}) scale({s:.3f})" '
+                f'fill="{ACCENT}" d="{ICONS[name]}"/>')
+
+    def stat(i, name, value, label, when):
+        cx = col * i + col / 2
+        return (
+            f'{icon(cx, 62, name)}'
+            f'<text x="{cx:.1f}" y="122" {big}>{value:,}</text>'
+            f'<text x="{cx:.1f}" y="160" {lab} fill="{TEXT}">{label}</text>'
+            f'<text x="{cx:.1f}" y="180" {sub}>{when}</text>'
         )
-    streak_col = (
-        f'<circle cx="{c2}" cy="98" r="42" fill="none" stroke="{ACCENT}" stroke-width="5"/>'
-        f'<text x="{c2}" y="109" {big}>{current:,}</text>'
-        f'<text x="{c2}" y="172" {lab} fill="{ACCENT}">Current Streak</text>'
-        f'<text x="{c2}" y="192" {sub}>{fmt_range(*cur_range, today)}</text>'
+
+    cx = W / 2
+    streak = (
+        f'<circle cx="{cx}" cy="94" r="40" fill="none" stroke="{ACCENT}" stroke-width="5"/>'
+        f'<circle cx="{cx}" cy="54" r="15" fill="{BG}"/>'  # gap in the ring behind the flame
+        f'{icon(cx, 52, "flame", 28)}'
+        f'<text x="{cx}" y="104" {big}>{current:,}</text>'
+        f'<text x="{cx}" y="160" {lab} fill="{ACCENT}">Current Streak</text>'
+        f'<text x="{cx}" y="180" {sub}>{fmt_range(*cur_range, today)}</text>'
     )
-    longest_col = (
-        f'<text x="{c3:.1f}" y="110" {big}>{longest:,}</text>'
-        f'<text x="{c3:.1f}" y="138" {lab} fill="{TEXT}">Longest Streak</text>'
-        f'<text x="{c3:.1f}" y="158" {sub}>{fmt_range(*long_range, today)}</text>'
+    cells = (
+        stat(0, "chart", total, "Total Contributions", f"{fmt_day(first)} - Present")
+        + stat(1, "calendar", best_month, "Highest in a Month", f"{dt.date(by, bm, 1):%b %Y}")
+        + streak
+        + stat(3, "bolt", counts[best_day], "Highest in a Day", fmt_day(dates[best_day]))
+        + stat(4, "trophy", longest, "Longest Streak", fmt_range(*long_range, today))
     )
     dividers = "".join(
-        f'<line x1="{x:.1f}" x2="{x:.1f}" y1="36" y2="{H - 36}" stroke="{BORDER}"/>' for x in (col, 2 * col)
+        f'<line x1="{col * i:.1f}" x2="{col * i:.1f}" y1="36" y2="{H - 36}" stroke="{BORDER}"/>' for i in range(1, 5)
     )
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">'
         f'<style>.t{{fill:{MUTED};font-size:12px}}</style>'
         f'<rect width="100%" height="100%" rx="8" fill="{BG}" stroke="{BORDER}"/>'
-        f'<g {FONT}>{total_col}{dividers}{streak_col}{longest_col}</g></svg>'
+        f'<g {FONT}>{cells}{dividers}</g></svg>'
     )
 
 
