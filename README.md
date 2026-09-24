@@ -38,9 +38,11 @@
 <p align="center">
   <b>Frontend & Mobile</b><br/><br/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg" height="40" title="React"/>&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nextjs/nextjs-original.svg" height="40" title="Next.js"/>&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/redux/redux-original.svg" height="40" title="Redux"/>&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/angular/angular-original.svg" height="40" title="Angular"/>&nbsp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/ionic/ionic-original.svg" height="40" title="Ionic"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/ionic/ionic-original.svg" height="40" title="Ionic"/>&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg" height="40" title="React Native"/>
 </p>
 
 <p align="center">
