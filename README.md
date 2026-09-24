@@ -31,7 +31,8 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg" height="40" title="TypeScript"/>&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nodejs/nodejs-original.svg" height="40" title="Node.js"/>&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/express/express-original.svg" height="40" title="Express" style="background:#fff;border-radius:6px"/>&nbsp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/bash/bash-original.svg" height="40" title="Bash"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" height="40" title="Python"/>&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/fastapi/fastapi-original.svg" height="40" title="FastAPI"/>
 </p>
 
 <p align="center">
@@ -50,41 +51,36 @@
 </p>
 
 <p align="center">
-  <b>Cloud & DevOps</b><br/><br/>
+  <b>Cloud</b><br/><br/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height="40" title="AWS" style="background:#fff;border-radius:6px"/>&nbsp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/googlecloud/googlecloud-original.svg" height="40" title="Google Cloud"/>&nbsp;&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nginx/nginx-original.svg" height="40" title="Nginx"/>&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/azure/azure-original.svg" height="40" title="Microsoft Azure"/>&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/googlecloud/googlecloud-original.svg" height="40" title="Google Cloud"/>
+</p>
+
+<p align="center">
+  <b>DevOps & Servers</b><br/><br/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/linux/linux-original.svg" height="40" title="Linux"/>&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/ubuntu/ubuntu-original.svg" height="40" title="Ubuntu"/>&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nginx/nginx-original.svg" height="40" title="Nginx"/>&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" height="40" title="Git"/>
 </p>
 
 ---
 
-### 📊 GitHub Stats
-
-<p align="center">
-  <img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=guru-sahoo&theme=github_dark" alt="Profile Details"/>
-</p>
-
-<p align="center">
-  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=guru-sahoo&theme=github_dark" alt="GitHub Stats"/>
-  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=guru-sahoo&theme=github_dark" alt="Most Commit Language"/>
-</p>
-
-<p align="center">
-  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=guru-sahoo&theme=github_dark" alt="Repos per Language"/>
-  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=guru-sahoo&theme=github_dark&utcOffset=5.5" alt="Productive Time"/>
-</p>
+### 📊 GitHub Activity
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=guru-sahoo&theme=github-dark-blue&hide_border=true&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff&sideLabels=c9d1d9&dates=8b949e" alt="GitHub Streak"/>
 </p>
 
+<p align="center">
+  <img width="100%" src="./assets/activity-30d.svg" alt="Daily contributions in the last 30 days"/>
+</p>
+
 ### 📈 Contribution Graph
 
 <p align="center">
-  <img width="100%" src="https://ghchart.rshah.org/58a6ff/guru-sahoo" alt="Contribution Heatmap"/>
+  <img width="100%" src="./assets/contribution-heatmap.svg" alt="Contribution heatmap for the last 12 months"/>
 </p>
 
 ---
