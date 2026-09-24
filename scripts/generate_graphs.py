@@ -286,10 +286,10 @@ def stats_card(all_days):
     )
     cells = (
         stat(0, "chart", total, "Total Contributions", f"{fmt_day(first)} - Present")
-        + stat(1, "calendar", best_month, "Highest in a Month", f"{dt.date(by, bm, 1):%b %Y}")
+        + stat(1, "trophy", longest, "Longest Streak", fmt_range(*long_range, today))
         + streak
-        + stat(3, "bolt", counts[best_day], "Highest in a Day", fmt_day(dates[best_day]))
-        + stat(4, "trophy", longest, "Longest Streak", fmt_range(*long_range, today))
+        + stat(3, "calendar", best_month, "Highest in a Month", f"{dt.date(by, bm, 1):%b %Y}")
+        + stat(4, "bolt", counts[best_day], "Highest in a Day", fmt_day(dates[best_day]))
     )
     dividers = "".join(
         f'<line x1="{col * i:.1f}" x2="{col * i:.1f}" y1="36" y2="{H - 36}" stroke="{BORDER}"/>' for i in range(1, 5)
