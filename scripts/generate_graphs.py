@@ -2,7 +2,8 @@
 
 Outputs:
   assets/contribution-heatmap.svg  - last 12 months, full-width heatmap
-  assets/activity-30d.svg          - daily contributions, last 30 days, line graph
+  assets/activity-30d.svg          - daily contributions, last 30 days, bar chart
+  assets/activity-12m.svg          - monthly contributions, last 12 months, bar chart
 
 Uses only the Python standard library. Reads GH_PAT (preferred) or GITHUB_TOKEN.
 """
@@ -97,53 +98,88 @@ def heatmap(days):
     )
 
 
-def line_chart(days, span=30):
-    days = sorted(days, key=lambda d: d["date"])[-span:]
-    vals = [d["contributionCount"] for d in days]
-    W, H, pl, pr, pt, pb = 900, 300, 50, 35, 60, 45
+def nice_step(raw):
+    """Round a tick step up to 1, 2, 2.5 or 5 x 10^n so axis labels stay clean."""
+    mag = 10 ** (len(str(int(raw))) - 1)
+    for m in (1, 2, 2.5, 5, 10):
+        if raw <= m * mag:
+            return int(m * mag) if m * mag >= 1 else 1
+    return int(10 * mag)
+
+
+def bar_chart(labels, values, title, stats, width=1000, label_size=11):
+    W, H, pl, pr, pt, pb = width, 320, 50, 20, 64, 40
     cw, ch = W - pl - pr, H - pt - pb
-    ymax = max(max(vals), 4)
-    step = max(1, round(ymax / 4))
-    ymax = step * 4
-    xs = [pl + i * cw / (len(vals) - 1) for i in range(len(vals))]
-    ys = [pt + ch - v / ymax * ch for v in vals]
-    pts = " ".join(f"{x:.1f},{y:.1f}" for x, y in zip(xs, ys))
-    area = f"{pl},{pt + ch} {pts} {xs[-1]:.1f},{pt + ch}"
+    peak = max(max(values), 4)
+    step = nice_step(peak / 5)
+    ticks = -(-peak // step)  # ceil: fewest gridlines that still clear the tallest bar
+    ymax = step * ticks
+    slot = cw / len(values)
+    bw = slot * 0.62
 
     grid = []
-    for i in range(5):
-        y = pt + ch - i * ch / 4
+    for i in range(ticks + 1):
+        y = pt + ch - i * ch / ticks
         grid.append(f'<line x1="{pl}" x2="{W - pr}" y1="{y:.1f}" y2="{y:.1f}" stroke="{BORDER}" stroke-dasharray="3 4"/>')
-        grid.append(f'<text x="{pl - 10}" y="{y + 4:.1f}" text-anchor="end" class="t">{i * step}</text>')
-    xl = []
-    for i, d in enumerate(days):
-        if i % 5 == 0 or i == len(days) - 1:
-            day = dt.date.fromisoformat(d["date"])
-            xl.append(f'<text x="{xs[i]:.1f}" y="{H - pb + 20}" text-anchor="middle" class="t">{day:%d %b}</text>')
-    dots = "".join(
-        f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3.5" fill="{BG}" stroke="{ACCENT}" stroke-width="2">'
-        f'<title>{v} on {d["date"]}</title></circle>'
-        for x, y, v, d in zip(xs, ys, vals, days)
-    )
-    total, peak = sum(vals), max(vals)
-    active = sum(1 for v in vals if v)
-    stats = f"{total} contributions  ·  {active}/{len(vals)} active days  ·  peak {peak}/day"
+        grid.append(f'<text x="{pl - 10}" y="{y + 4:.1f}" text-anchor="end" class="t">{i * step:,}</text>')
+
+    bars, xl = [], []
+    for i, (lab, v) in enumerate(zip(labels, values)):
+        cx = pl + slot * i + slot / 2
+        x = cx - bw / 2
+        if v:
+            h = max(v / ymax * ch, 3)
+            y = pt + ch - h
+            bars.append(
+                f'<rect x="{x:.1f}" y="{y:.1f}" width="{bw:.1f}" height="{h:.1f}" rx="3" fill="url(#b)">'
+                f'<title>{lab}: {v:,}</title></rect>'
+                f'<text x="{cx:.1f}" y="{y - 6:.1f}" text-anchor="middle" class="v">{v:,}</text>'
+            )
+        else:
+            bars.append(f'<rect x="{x:.1f}" y="{pt + ch - 2}" width="{bw:.1f}" height="2" rx="1" fill="{BORDER}">'
+                        f'<title>{lab}: 0</title></rect>')
+        xl.append(f'<text x="{cx:.1f}" y="{H - pb + 20}" text-anchor="middle" class="x">{lab}</text>')
 
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">'
-        f'<defs><linearGradient id="a" x1="0" y1="0" x2="0" y2="1">'
-        f'<stop offset="0" stop-color="{ACCENT_2}" stop-opacity=".45"/>'
-        f'<stop offset="1" stop-color="{ACCENT_2}" stop-opacity="0"/></linearGradient></defs>'
-        f'<style>.t{{fill:{MUTED};font-size:12px}}</style>'
+        f'<defs><linearGradient id="b" x1="0" y1="0" x2="0" y2="1">'
+        f'<stop offset="0" stop-color="{ACCENT}"/><stop offset="1" stop-color="{ACCENT_2}"/></linearGradient></defs>'
+        f'<style>.t{{fill:{MUTED};font-size:12px}}.x{{fill:{MUTED};font-size:{label_size}px}}'
+        f'.v{{fill:{TEXT};font-size:10px;font-weight:600}}</style>'
         f'<rect width="100%" height="100%" rx="8" fill="{BG}" stroke="{BORDER}"/>'
         f'<g {FONT}>'
-        f'<text x="{pl}" y="30" fill="{TEXT}" font-size="16" font-weight="600">Daily contributions · last {len(vals)} days</text>'
-        f'<text x="{W - pr}" y="30" text-anchor="end" class="t">{stats}</text>'
-        f'{"".join(grid)}{"".join(xl)}'
-        f'<polygon points="{area}" fill="url(#a)"/>'
-        f'<polyline points="{pts}" fill="none" stroke="{ACCENT}" stroke-width="2.5" stroke-linejoin="round"/>'
-        f'{dots}</g></svg>'
+        f'<text x="{pl}" y="32" fill="{TEXT}" font-size="16" font-weight="600">{title}</text>'
+        f'<text x="{W - pr}" y="32" text-anchor="end" class="t">{stats}</text>'
+        f'{"".join(grid)}{"".join(bars)}{"".join(xl)}</g></svg>'
     )
+
+
+def daily_chart(days, span=30):
+    days = sorted(days, key=lambda d: d["date"])[-span:]
+    labels = [f"{dt.date.fromisoformat(d['date']).day}/{dt.date.fromisoformat(d['date']).month}" for d in days]
+    vals = [d["contributionCount"] for d in days]
+    active = sum(1 for v in vals if v)
+    stats = f"{sum(vals):,} contributions  ·  {active}/{len(vals)} active days  ·  peak {max(vals)}/day"
+    return bar_chart(labels, vals, f"Daily contributions · last {len(vals)} days", stats, label_size=10)
+
+
+def monthly_chart(days, months=12):
+    totals = {}
+    for d in days:
+        key = d["date"][:7]
+        totals[key] = totals.get(key, 0) + d["contributionCount"]
+    last = dt.date.fromisoformat(max(d["date"] for d in days))
+    keys = []
+    y, m = last.year, last.month
+    for _ in range(months):
+        keys.append(f"{y:04d}-{m:02d}")
+        y, m = (y, m - 1) if m > 1 else (y - 1, 12)
+    keys.reverse()
+    labels = [f"{int(k[5:])}/{k[2:4]}" for k in keys]
+    vals = [totals.get(k, 0) for k in keys]
+    best = labels[vals.index(max(vals))]
+    stats = f"{sum(vals):,} contributions  ·  avg {round(sum(vals) / len(vals)):,}/month  ·  best {best}"
+    return bar_chart(labels, vals, f"Monthly contributions · last {len(vals)} months", stats, label_size=12)
 
 
 def main():
@@ -158,7 +194,9 @@ def main():
     with open(os.path.join(OUT_DIR, "contribution-heatmap.svg"), "w") as f:
         f.write(heatmap(days))
     with open(os.path.join(OUT_DIR, "activity-30d.svg"), "w") as f:
-        f.write(line_chart(days))
+        f.write(daily_chart(days))
+    with open(os.path.join(OUT_DIR, "activity-12m.svg"), "w") as f:
+        f.write(monthly_chart(days))
     print(f"Wrote graphs for {USER} ({len(days)} days)")
 
 

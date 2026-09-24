@@ -77,6 +77,10 @@
   <img width="100%" src="./assets/activity-30d.svg" alt="Daily contributions in the last 30 days"/>
 </p>
 
+<p align="center">
+  <img width="100%" src="./assets/activity-12m.svg" alt="Monthly contributions in the last 12 months"/>
+</p>
+
 ### 📈 Contribution Graph
 
 <p align="center">
