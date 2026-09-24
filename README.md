@@ -51,10 +51,17 @@
 </p>
 
 <p align="center">
+  <b>Caching & Messaging</b><br/><br/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/redis/redis-original.svg" height="40" title="Redis"/>&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/rabbitmq/rabbitmq-original.svg" height="40" title="RabbitMQ"/>
+</p>
+
+<p align="center">
   <b>Cloud & DevOps</b><br/><br/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height="40" title="AWS" style="background:#fff;border-radius:6px"/>&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/azure/azure-original.svg" height="40" title="Microsoft Azure"/>&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/googlecloud/googlecloud-original.svg" height="40" title="Google Cloud"/>&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/docker/docker-original.svg" height="40" title="Docker"/>
 </p>
 
 ---
