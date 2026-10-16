@@ -5,12 +5,16 @@ on:
     - cron: "30 */3 * * *"   # every 3 hours (GitHub may delay scheduled runs)
   workflow_dispatch:
   push:
-    paths:
-      - scripts/generate_graphs.py
-      - .github/workflows/contribution-graphs.yml
+    branches: [main]
+    paths-ignore:
+      - assets/**   # the bot's own SVG commits must not retrigger this
 
 permissions:
   contents: write
+
+concurrency:
+  group: contribution-graphs
+  cancel-in-progress: true
 
 jobs:
   graphs:
