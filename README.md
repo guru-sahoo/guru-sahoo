@@ -16,9 +16,9 @@
 
 ### 🧑‍💻 About Me
 
-- 👀 **Full Stack Developer** with a backend and infrastructure focus.
-- 🏫 Building large-scale **education technology** platforms: data collection, assessments, and reporting.
-- ⚙️ Hands-on with **Linux servers, Nginx, PM2, and MongoDB** in production.
+- 👀 **Full Stack Developer** with a backend and infrastructure focus
+- 🏫 Building large-scale **education technology** platforms: data collection, assessments, and reporting
+- ⚙️ Hands-on with **Linux servers, Nginx, PM2, and MongoDB** in production
 - 🌱 Currently learning **DevOps & Machine Learning**
 
 ---
